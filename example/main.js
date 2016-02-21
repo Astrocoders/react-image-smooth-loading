@@ -1,9 +1,6 @@
 (function(){
   var Img = React.createFactory(ReactImg.default);
-
-  Img.globalPlaceholder =
-    'astrocoders.github.io/react-image-smooth-loading/images/placeholder.png';
-
+  
   var App = React.createClass({
     render(){
       var imgs = this._getImageList().map(function(url){
