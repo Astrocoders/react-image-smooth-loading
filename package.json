@@ -1,0 +1,55 @@
+{
+  "name": "react-image-smooth-loading",
+  "version": "1.0.0",
+  "description": "React component for making your site images appear in a fade in",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy_bundle_to_example": "./scripts/copy_bundle_to_example.sh",
+    "build_js": "./scripts/compile_sources.sh",
+    "build_styles": "./scripts/compile_styl.sh",
+    "prepare_publish": "npm run build_styles && npm run build_js && npm run copy_bundle_to_example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Astrocoders/react-image-smooth-loading.git"
+  },
+  "keywords": [
+    "react",
+    "image",
+    "smooth",
+    "loading",
+    "image",
+    "fade",
+    "in"
+  ],
+  "author": "Gabriel Rubens",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Astrocoders/react-image-smooth-loading/issues"
+  },
+  "homepage": "https://github.com/Astrocoders/react-image-smooth-loading#readme",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-plugin-transform-runtime": "^6.5.2",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "browserify": "^13.0.0",
+    "exposify": "^0.5.0",
+    "http-server": "^0.9.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "stylus": "^0.53.0",
+    "uglifyify": "^3.0.1"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.5.0",
+    "classnames": "^2.2.3",
+    "css-modulesify": "^0.17.1",
+    "react-style": "^0.5.5"
+  }
+}
