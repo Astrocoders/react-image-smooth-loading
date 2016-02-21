@@ -15,7 +15,14 @@ Img.placeholder = '/images/placeholder.png';
 const Container = React.createClass({
   render(){
     <div className="image-grid">
-      {this._getImageList.map(url => <Img src={url}/>)}
+      {this._getImageList.map(url => {
+        return (
+          <div className="image-card">
+            <Img src={url}/>
+            <p>My awesome image</p>
+          </div>
+        );
+      })}
     </div>
   },
 
@@ -25,4 +32,19 @@ const Container = React.createClass({
     ];
   }
 });
+```
+
+Remember that Img is totally responsive, which means that it will fit accordingly
+to the space given to it by its container.
+
+
+## Options
+
+```js
+const settings = {
+  src: '...' // Image source,
+  placeholder: '...' // Optional image placeholder, overrides globalPlaceholder,
+  holderClasses: '...' // Img container class
+  imgClasses: '...' // Classes for <img/> tags
+};
 ```
