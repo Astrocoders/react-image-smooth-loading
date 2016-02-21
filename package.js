@@ -12,6 +12,7 @@ Package.onUse(function(api) {
     'ecmascript',
     'mongo',
     'underscore',
+    'react',
   ]);
 
   api.addFiles([
