@@ -4,7 +4,7 @@
   "description": "React component for making your site images appear in a fade in",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd example && python -m SimpleHTTPServer",
     "copy_bundle_to_example": "./scripts/copy_bundle_to_example.sh",
     "build_js": "./scripts/compile_sources.sh",
     "build_styles": "./scripts/compile_styl.sh",
