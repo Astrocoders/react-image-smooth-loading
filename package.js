@@ -1,6 +1,6 @@
 Package.describe({
   name: 'astrocoders:react-img',
-  version: '1.1.4',
+  version: '0.0.1',
   summary: 'https://github.com/Astrocoders/react-image-smooth-loading/',
   git: 'https://github.com/Astrocoders/meteor-astrocoders-publish',
   documentation: 'README.md'
