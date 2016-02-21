@@ -19,7 +19,7 @@
 
     _getImageList(){
       return [
-        'http://lorempixel.com/480/480/sports',
+        'http://astrocoders.com/react-image-smooth-loading/images/patriota.jpg',
         'http://lorempixel.com/480/480/animals',
         'http://lorempixel.com/480/480/people',
         'http://lorempixel.com/480/480/food',
