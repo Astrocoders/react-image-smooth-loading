@@ -10,7 +10,8 @@ import Img from 'react-image-smooth-loading';
 
 // Define which placeholder to show while the image is loading
 // Can be any image file.
-Img.placeholder = '/images/placeholder.png';
+// There's already a default one in base64, but you'd like to change ;)
+Img.globalPlaceholder = '/images/placeholder.png';
 
 const Container = React.createClass({
   render(){
