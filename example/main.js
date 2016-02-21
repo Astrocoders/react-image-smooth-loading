@@ -1,12 +1,30 @@
 (function(){
   var Img = React.createFactory(ReactImg.default);
 
+  Img.globalPlaceholder =
+    'astrocoders.github.io/react-image-smooth-loading/images/placeholder.png';
+
   var App = React.createClass({
     render(){
+      var imgs = this._getImageList().map(function(url){
+        return React.createElement('div', {
+          style: { width: '20%', float: 'left', 'margin-left': '10px' },
+        }, Img({ src: url, key: url}));
+      });
+
       return React.createElement('div', {
-        style: {width: '480px', height: '480px'}
-      }, Img({src: 'http://astrocoders.com/react-image-smooth-loading/images/patriota.jpg'}));
+        style: {height: '480px'}
+      }, imgs);
     },
+
+    _getImageList(){
+      return [
+        'http://lorempixel.com/480/480/sports',
+        'http://lorempixel.com/480/480/animals',
+        'http://lorempixel.com/480/480/people',
+        'http://lorempixel.com/480/480/food',
+      ];
+    }
   });
 
   window.addEventListener('load', function(){
