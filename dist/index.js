@@ -25,8 +25,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Img = _react2.default.createClass({
   displayName: 'Img',
 
+  statics: {
+    globalPlaceholder: '/images/placeholder.png'
+  },
+
   propTypes: {
     src: _react.PropTypes.string.isRequired,
+    placeholder: _react.PropTypes.string,
     imgClasses: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.array]),
     holderClasses: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.array])
   },
@@ -50,7 +55,7 @@ var Img = _react2.default.createClass({
       }),
       _react2.default.createElement('img', {
         className: (0, _classnames2.default)(_styles2.default['placeholder'], this.props.imgClasses),
-        src: '/images/placeholder.png'
+        src: this.props.placeholder || Img.globalPlaceholder
       })
     );
   }
