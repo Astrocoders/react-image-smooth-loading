@@ -10,9 +10,8 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2');
   api.use([
     'ecmascript',
-    'mongo',
     'underscore',
-    'react',
+    'react@0.14.1_1',
   ]);
 
   api.addFiles([
