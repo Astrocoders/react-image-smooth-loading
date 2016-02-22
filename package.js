@@ -1,6 +1,6 @@
 Package.describe({
   name: 'astrocoders:react-img',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'https://github.com/Astrocoders/react-image-smooth-loading/',
   git: 'https://github.com/Astrocoders/meteor-astrocoders-publish',
   documentation: 'README.md'
@@ -16,11 +16,11 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'dist/browser.js',
-  ]);
+  ], 'client');
 
   api.addAssets([
     'dist/styles.css',
-  ], 'server');
+  ], 'client');
 
-  api.export('ReactImg');
+  api.export('ReactImg', 'client');
 });
