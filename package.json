@@ -49,7 +49,6 @@
   "dependencies": {
     "babel-runtime": "^6.5.0",
     "classnames": "^2.2.3",
-    "css-modulesify": "^0.17.1",
-    "react-style": "^0.5.5"
+    "css-modulesify": "^0.17.1"
   }
 }
