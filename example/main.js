@@ -3,10 +3,11 @@
   
   var App = React.createClass({
     render(){
-      var imgs = this._getImageList().map(function(url){
+      var onClick = function(){ console.log('Clicked'); };
+      var imgs = this._getImageList().map(function(url, index){
         return React.createElement('div', {
-          style: { width: '20%', float: 'left', 'margin-left': '10px' },
-        }, Img({ src: url, key: url}));
+          style: { width: '20%', float: 'left', marginLeft: '10px' },
+        }, Img({ src: url, onClick: onClick, key: 'photo' + index}));
       });
 
       return React.createElement('div', {
