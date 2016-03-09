@@ -41,8 +41,10 @@ var Img = _react2.default.createClass({
     var holder = _reactDom2.default.findDOMNode(this);
 
     if (!holder) return;
+    var intended = holder.querySelector('.' + _styles2.default['intended']);
+    if (!intended) return;
 
-    holder.querySelector('.' + _styles2.default['intended']).addEventListener('load', function () {
+    intended.addEventListener('load', function () {
       holder.querySelector('.' + _styles2.default['placeholder']).classList.add(_styles2.default['deactivated']);
     });
   },
