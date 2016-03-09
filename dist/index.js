@@ -33,11 +33,14 @@ var Img = _react2.default.createClass({
     src: _react.PropTypes.string.isRequired,
     placeholder: _react.PropTypes.string,
     imgClasses: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.array]),
-    holderClasses: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.array])
+    holderClasses: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.array]),
+    onClick: _react.PropTypes.func
   },
 
   componentDidMount: function componentDidMount() {
     var holder = _reactDom2.default.findDOMNode(this);
+
+    if (!holder) return;
 
     holder.querySelector('.' + _styles2.default['intended']).addEventListener('load', function () {
       holder.querySelector('.' + _styles2.default['placeholder']).classList.add(_styles2.default['deactivated']);
@@ -47,7 +50,8 @@ var Img = _react2.default.createClass({
     return _react2.default.createElement(
       'div',
       {
-        className: (0, _classnames2.default)(_styles2.default['image-holder'], this.props.holderClasses)
+        className: (0, _classnames2.default)(_styles2.default['image-holder'], this.props.holderClasses),
+        onClick: this.props.onClick
       },
       _react2.default.createElement('img', {
         className: (0, _classnames2.default)(_styles2.default['intended'], this.props.imgClasses),
