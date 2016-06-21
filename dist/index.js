@@ -34,7 +34,8 @@ var Img = _react2.default.createClass({
     placeholder: _react.PropTypes.string,
     imgClasses: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.array]),
     holderClasses: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.array]),
-    onClick: _react.PropTypes.func
+    onClick: _react.PropTypes.func,
+    alt: _react.PropTypes.string
   },
 
   componentDidMount: function componentDidMount() {
@@ -57,11 +58,13 @@ var Img = _react2.default.createClass({
       },
       _react2.default.createElement('img', {
         className: (0, _classnames2.default)(_styles2.default['intended'], this.props.imgClasses),
-        src: this.props.src
+        src: this.props.src,
+        alt: this.props.alt
       }),
       _react2.default.createElement('img', {
         className: (0, _classnames2.default)(_styles2.default['placeholder'], this.props.imgClasses),
-        src: this.props.placeholder || Img.globalPlaceholder
+        src: this.props.placeholder || Img.globalPlaceholder,
+        alt: this.props.alt
       })
     );
   }
