@@ -44,7 +44,7 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "stylus": "^0.54.5",
-    "uglifyify": "^3.0.1"
+    "uglifyify": "^3.0.4"
   },
   "dependencies": {
     "babel-runtime": "^6.5.0",
