@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "cd example && python -m SimpleHTTPServer",
-    "copy_bundle_to_example": "./scripts/copy_bundle_to_example.sh",
-    "build_js": "./scripts/compile_sources.sh",
-    "build_styles": "./scripts/compile_styl.sh",
-    "prepare_publish": "npm run build_styles && npm run build_js && npm run copy_bundle_to_example"
+    "update-example": "./scripts/copy_bundle_to_example.sh",
+    "build": "./scripts/compile_sources.sh",
+    "prepublish": "npm run build_styles && npm run build_js && npm run copy_bundle_to_example"
   },
   "repository": {
     "type": "git",
