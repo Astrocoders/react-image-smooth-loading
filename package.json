@@ -1,6 +1,6 @@
 {
   "name": "react-image-smooth-loading",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "React component for making your site images appear in a fade in",
   "main": "index.js",
   "scripts": {
