@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "babel lib --ignore __tests__ --out-dir ./dist",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
   },
   "homepage": "https://github.com/Astrocoders/react-image-smooth-loading#readme",
   "devDependencies": {
+    "@storybook/storybook-deployer": "^2.0.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.0",
@@ -34,7 +37,8 @@
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.11.1",
-    "babel-preset-stage-2": "^6.18.0"
+    "babel-preset-stage-2": "^6.18.0",
+    "@storybook/react": "^3.1.9"
   },
   "dependencies": {},
   "peerDependencies": {
