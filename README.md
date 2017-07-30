@@ -5,9 +5,13 @@ See a [demo](http://astrocoders.com/react-image-smooth-loading/).
 
 # Install
 ```
-yarn react-image-smooth-loading styled-components
+yarn add react-image-smooth-loading
 ```
-
+_Note_: styled-components, react and react-dom were added as peer dependencies.
+If you don't have then you must install them as well.
+```
+yarn add react-image-smooth-loading styled-components react react-dom
+```
 # Usage
 
 ```js
@@ -40,10 +44,13 @@ to the space given to it by its container.
 
 ```js
 const props = {
-  src: '...' // Image source,
-  placeholder: '...' // Optional image placeholder, overrides globalPlaceholder,
-  holderClasses: '...' // Img container class
-  imgClasses: '...' // Classes for <img/> tags
+  src: PropTypes.string.isRequired,
+  placeholder: PropTypes.string, // Optional image placeholder, overrides globalPlaceholder,
+  imgClasses: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  holderClasses: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  placeholderProps: PropTypes.object,
+  onClick: PropTypes.func,
+  alt: PropTypes.string,
 }
 
 <Img {...props} />>
