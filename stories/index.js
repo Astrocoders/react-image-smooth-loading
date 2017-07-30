@@ -1,13 +1,20 @@
-import React from 'react';
+import React from 'react'
 
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
+import { linkTo } from '@storybook/addon-links'
 
-import { Button, Welcome } from '@storybook/react/demo';
+import styled from 'styled-components'
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+import Img from '../lib'
 
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
+const Wrapper = styled.div`
+  width: 400px;
+  height: 400px;
+`
+
+storiesOf('Img', module)
+  .addDecorator(getStory => (
+    <Wrapper>{getStory()}</Wrapper>
+  ))
+  .add('initial', () => <Img src="http://lorempixel.com/400/400/animals" />)
