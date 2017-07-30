@@ -6,8 +6,8 @@
   "scripts": {
     "start": "cd example && python -m SimpleHTTPServer",
     "update-example": "./scripts/copy_bundle_to_example.sh",
-    "build": "./scripts/compile_sources.sh",
-    "prepublish": "npm run build_styles && npm run build_js && npm run copy_bundle_to_example"
+    "build": "babel lib --ignore __tests__ --out-dir ./dist",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -40,14 +40,14 @@
     "browserify": "^13.1.1",
     "exposify": "^0.5.0",
     "http-server": "^0.9.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.3.2",
     "stylus": "^0.54.5",
     "uglifyify": "^3.0.4"
   },
   "dependencies": {},
   "peerDependencies": {
     "prop-types": "^15.5.10",
-    "styled-components": "^2.1.1"
+    "styled-components": "^2.1.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.3.2",
   }
 }
