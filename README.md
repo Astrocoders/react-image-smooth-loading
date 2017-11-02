@@ -7,10 +7,10 @@ See a [demo](http://astrocoders.com/react-image-smooth-loading/).
 ```
 yarn add react-image-smooth-loading
 ```
-_Note_: styled-components, react and react-dom were added as peer dependencies.
+_Note_: styled-components and react were added as peer dependencies.
 If you don't have then you must install them as well.
 ```
-yarn add react-image-smooth-loading styled-components react react-dom
+yarn add react-image-smooth-loading styled-components react
 ```
 # Usage
 
