@@ -46,7 +46,7 @@ to the space given to it by its container.
 const props = {
   src: PropTypes.string.isRequired,
   placeholder: PropTypes.string, // Optional image placeholder, overrides globalPlaceholder,
-  imgClasses: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   holderClasses: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   placeholderProps: PropTypes.object,
   onClick: PropTypes.func,
