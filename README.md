@@ -30,7 +30,7 @@ export default function ImageList({ list }) {
           <Img src={url} />
           <p>My awesome image</p>
         </ImageItemWrapper>
-      )}
+      ))}
     </div>
   )
 }
@@ -53,5 +53,5 @@ const props = {
   alt: PropTypes.string,
 }
 
-<Img {...props} />>
+<Img {...props} />
 ```
